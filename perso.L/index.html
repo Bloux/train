@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    
+<!-- ============================
+=       SOURCES
+============================= -->
+    <head>
+        
+        <!-- === INFOS === -->
+        <meta charset="utf-8">
+        <title>Léo Déprez</title>
+        <meta name="description" content="VenkiTp">
+        <meta name="author" content="Léo Deprez">
+        <meta name="keywords" content="Léo Deprez">
+
+        <!-- === MOBILE === -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- === CSS === -->
+        <link rel="stylesheet" href="./css/index.css">
+
+        <!-- === SCRIPT === -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- === FAVICONS === -->
+        <link rel="shortcut icon" href="./images/logo-icon.png" type="image/x-icon">
+        <link rel="icon" href="./images/logo-icon.png" type="image/x-icon">
+        <meta charset="UTF-8">
+        
+    </head>
+    
+    <body>
+        
+<!-- ============================
+=       MAIN
+============================= -->
+        
+<!-- ========== Logo ========== -->
+        <div id='top-div'>
+            <h1 id='name-text'>
+                Léo
+                <span id='surname-text'>Déprez</span>
+            </h1>
+            <h2>Computer science student</h2>
+        </div>
+        
+        <div id='bottom-div'>
+            <div id='network-div'>
+                <a title='Go to my LinkedIn' href='https://www.linkedin.com/in/l%C3%A9o-deprez-810775178/' target="_blank"><img class='network-logo' id='linkedin' src='./images/linkedin-icon.png'></a>
+                <a title='Send me an email' href='mailto:leo_deprez@hotmail.fr'><img class='network-logo' id='email' src='./images/email-icon.png'></a>
+                <a title='Go to my GitHub' href='https://github.com/Bloux' target="_blank"><img class='network-logo' id='github' src='./images/github-icon.png'></a>
+            </div>
+            <a id='email-text' title='Copy my email'>leo_deprez@hotmail.fr</a>
+        </div>
+        <a title='View my CV' href='./images/D%C3%A9prez%20L%C3%A9o%20-%20Cv.pdf' target="_blank"><img id='logo' src='./images/logo.png'></a>
+        <input id='hidden-email' type='hidden' value='leo_deprez@hotmail.fr'>
+    </body>
+    
+    <script>
+        $(this).ready(function() {
+            $('#email-text').click(function() {
+                var $temp = $("<input>");
+                $("body").append($temp);
+                $temp.val($('#hidden-email').val()).select();
+                document.execCommand("copy");
+                $temp.remove();
+            });
+        });
+    </script>
+</html>
